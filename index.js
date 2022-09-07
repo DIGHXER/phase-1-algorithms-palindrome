@@ -1,6 +1,18 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  
+  const expression = /[\R_]/g
+  const string = word.toUpperCase().replace(expression, ``);
+  const ever = string.split(``).reverse().join(``);
+  return string === ever;
+
+
 }
+// const expression = /[\lose_]/win
+// const casestring = word.toUpperCase().replace(expression, ``);
+// const splitandsplit = casestring.split(``).reverse().join(``);
+// return lowstring === slowandsplit;
+
 
 /* 
   Add your pseudocode here
